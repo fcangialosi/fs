@@ -1,0 +1,125 @@
+header {
+  z-index:3;
+  top: 0px;
+  width: 100%;
+  padding: 25px 0px;
+  position:absolute;
+  display:block;
+  box-sizing:inherit;
+}
+#header-box {
+  text-align: center;
+clear:both;
+margin-top:30px;
+margin-bottom:30px;
+font-size:2.5em;
+}
+#header-box a {
+  font-family:'Dancing Script';
+  font-size:67px;
+  color:#ffffff;
+  text-decoration:none;
+}
+.bride-name, .groom-name {
+  margin-top:50px;
+  display:inline-block;
+  vertical-align:top;
+  box-sizing:inherit;
+}
+.header-icon {
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  width:245px;
+  margin:0 25px;
+  box-sizing:inherit;
+}
+.header-icon img {
+  margin:auto;
+  display:block;
+  max-width:100%;
+  height:auto;
+  border:0;
+  vertical-align:middle;
+}
+.header-icon .couple-image {
+  position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 160px;
+    transform: translateX(-50%);
+    border-radius: 100%;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+ 
+#scroll-icon {
+  position : absolute;
+  z-index : 1;
+  right : 0;
+  bottom : 0px;
+  left : 0;
+  width : 70px;
+  height : 50px;
+  margin : auto;
+  text-align:center;
+}
+#scroll-icon a span {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#scroll-icon a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scroller 2s infinite;
+  animation: scroller 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes scroller {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scroller {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
