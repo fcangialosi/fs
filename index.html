@@ -12,10 +12,14 @@
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
 <link rel='dns-prefetch' href='//s.w.org' />
 
-<link rel='stylesheet' id='butterfly-fonts-css'  href='https://fonts.googleapis.com/css?family=Comfortaa%7CScope+One%7CDancing+Script&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+
 <link rel='stylesheet' id='bootstrap-css'  href='http://beta.flockthemes.com/butterfly/video/wp-content/themes/butterfly/css/bootstrap.min.css?ver=3.3.7' type='text/css' media='all' />
+<link rel='stylesheet' id='butterfly-fonts-css'  href='https://fonts.googleapis.com/css?family=Comfortaa%7CScope+One%7CDancing+Script%7CArvo%7CRaleway%7CRoboto+Slab:300%7CMaven+Pro:400,700,900&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
 <link rel='stylesheet' id='butterfly-theme-css'  href='http://beta.flockthemes.com/butterfly/video/wp-content/themes/butterfly/css/theme.css?ver=1.1' type='text/css' media='all' />
 <link rel='stylesheet' href='./style.css' type='text/css' media='all' />
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
 
 <script type='text/javascript' src='http://beta.flockthemes.com/butterfly/video/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
 
@@ -24,6 +28,7 @@
 
 <body>
 
+<!--
 <div>
   <header>
     <div>
@@ -44,12 +49,53 @@
     </div>
   </header>
 </div>
+-->
+  <header>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="columns">
+          <div class="column">
+            <span class="groom-name">
+            Frank
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="column is-narrow kiss-container" style="width:160px">
+        <div class="columns">
+          <div class="column">
+            <span class="groom-korean">프랭크</span>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <img src="./kiss.jpeg" alt="" class="couple-image">
+            <div id="couple-image-bg"></div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <span class="bride-korean">남수영</span>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="columns">
+          <div class="column">
+            <span class="bride-name">
+            Su-Young
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
   
-<!-- SLIDESHOW -->
+<section>
 <div id="bf_slideshow" class="carousel slide" data-ride="carousel">
   <ul class="carousel-inner">
     <li class="item active"><div class="embed-responsive embed-responsive-16by9 youtube-embed-responsive" style="width: ; left: 50%; transform: translateX(-50%); ">
-        <iframe id="bg-video" class="embed-responsive-item youtube-embed" src="https://www.youtube.com/embed/n1r1BamWsDErel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=n1r1BamWsDE&amp;vq=hd1080"width: ;height: ; left:50%; top: 50%; transform: translate(-50%,-50%); "></iframe>
+        <iframe id="bg-video" class="embed-responsive-item youtube-embed" src="https://www.youtube.com/embed/n1r1BamWsDE?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;loop=1&amp;playlist=n1r1BamWsDE&amp;vq=hd1080"width: ;height: ; left:50%; top: 50%; transform: translate(-50%,-50%); "></iframe>
     </li> 
   </ul>
 
@@ -60,7 +106,6 @@
     </a>
   </div>
 </div>
-<!-- END SLIDESHOW -->
 
 <!--
 <div id="panel-w590ad4715e753-0-0-1" class="so-panel widget widget_text" data-index="1">
@@ -71,10 +116,155 @@
       <p><span>December 30, 2017</span></p>
     </div>
   </div>
-</div>  
+</div> 
+</section>
+
 -->
 
-<script type='text/javascript' src='./fslove.js'></script>
+<section class="hero is-large" id="announcement">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <img class="announce-between" src="./milk_wed.png" />
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column" id="announce-title">
+          We're getting married!
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column" id="announce-date">
+          DECEMBER <span>30<sup>th</sup></span>, 2017
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column" id="announce-location">
+          Annandale, VA
+        </div>
+      </div>
+      <hr id="announce-hr">
+      <div class="columns is-centered has-text-centered">
+        <div class="column" id="announce-countdown">
+          <span></span>
+        </div>
+      </div>
 
+    </div>
+  </div>
+  <img src="./tree_1.png" id="announce-tree-1"/>
+  <img src="./tree_4.png" id="announce-tree-2"/>
+  <img src="./tree_3.png" id="announce-tree-3"/>
+  <img src="./tree_2.png" id="announce-tree-4"/>
+</section>
+
+
+<div id='map'></div>
+
+<!--
+
+<section class="hero is-large" id="timeline">
+  <div class="hero-body">
+    <div class="container">
+      <figure class="pic1">
+      <img src="https://31.media.tumblr.com/tumblr_mel7ujiRxo1qha057o1_1280.jpg" />
+      <figcaption>Summer 2014</figcaption>
+    </figure>
+    </div>
+  </div>
+</section>
+
+-->
+
+<section id="registry">
+  <div class="container">
+    <center>
+      <img class="section-head-between" src="./milk_gift_2.png" />
+      <img class="section-head-between" src="./merry_gift_2.png" />
+      <h1 class="section-head">Registry</h1>
+      <p class="voff-md section-text">
+      <!-- TODO -->
+      </p>
+      <div class="columns voff-md">
+        <div class="column is-offset-3 is-2">
+          <img class="registry-logo" src="https://cdn.couponcabin.com/prd/www/res/img/coupons/macys/large_logo.png" />
+        </div>
+        <div class="column is-2">
+          <img class="registry-logo" src="https://www.customerinsightgroup.com/wp-content/uploads/2016/09/Crate-Barrel-Launches-Digital-Engagement-Solution-.jpg" />
+        </div>
+        <div class="column is-2">
+          <img class="registry-logo" src="http://static1.squarespace.com/static/586feded9f7456494bb92281/586ff1e246c3c4a1fe5fe72f/58a77a97e58c62fa405ec3a6/1489171041050/TendrHeart_HiRes.png.jpeg?format=1000w"/>
+        </div>
+      </div>
+    </center>
+  </div>
+</section>
+
+<section id="photo-section">
+    <center class="voff-md">
+      <img class="section-head-between" src="./milk_cam.png" />
+      <img class="section-head-between" src="./merry_cam.png" />
+      <h1 class="section-head">Photo Gallery</h1>
+    </center>
+    <div class="voff-md"></div>
+    <div id="masonry">
+      <div class="grid-item"> <img src="./gallery/FullSizeRender.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4248.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_2054.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_2217.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_0717.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_9847.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_2070.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4100.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4105.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_9185.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_9797.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_9780.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-18.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_5056.JPG.jpeg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_8729.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4908.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4799.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4363.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_2915.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_2935.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3173.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3177.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3603.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3648.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3800.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3858.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3985.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_4093.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3217.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3296.JPG"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3359.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/IMG_3568.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-15.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-13.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-14.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-9.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-6.jpg"/></div>
+      <div class="grid-item"> <img src="./gallery/FullSizeRender-3.jpg"/></div>
+    </div>
+</section>
+
+
+<footer class="footer hero is-primary is-bold">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <b><a href="https://github.com/fcangialosi/fslove">Built</a></b> in Boston with <i class="fa fa-heart-o"></i> by <a href="mailto:frankc@csail.mit.edu"><i class="fa fa-github-alt"></i></a>
+      </p>
+      <!--<p><b></b></p>-->
+    </div>
+  </div>
+</footer>
+
+<script type='text/javascript' src='./fslove.js'></script>
+<script type='text/javascript' src='./countdown.min.js'></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 </body>
 </html>

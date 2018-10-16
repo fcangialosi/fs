@@ -1,0 +1,420 @@
+// Bulma v0.5.1, expected in ./bulma/
+@import "bulma/sass/utilities/_all";
+@import "bulma/sass/grid/columns";
+@import "bulma/sass/layout/_all";
+@import "bulma/sass/base/_all";
+
+/* 어비폰트 - 웹폰트 설정영역 */
+@font-face {font-family: 'UhBeepuding';src: url('fonts/UhBeepuding.eot');}
+@font-face {font-family: 'UhBeepuding';src: url('fonts/UhBeepuding.woff') format('woff');}
+article { font-family: "UhBeepuding", serif;}
+textarea  {font-family: "UhBeepuding", serif; }
+
+
+$dark-blue: #394a66;
+$dark-green: #456467;
+$light-green: #90A59E;
+$light-blue: #8897A0;
+$sand: #CCBDAA;
+
+$cork: url(./tiles/cork-wallet.png);
+$doodles: url(./tiles/doodles.png);
+$natural: url(./tiles/ep_naturalwhite.png);
+$graph-paper: url(./tiles/graphy.png);
+$toys: url(./tiles/memphis-colorful.png);
+$grey-pattern: url(./tiles/random_grey_variations.png);
+$sativa: url(./tiles/sativa.png);
+$paper: url(./tiles/seamless_paper_texture.png);
+
+$top-wreath: url(https://withjoy.com/assets/public/joyStyles3/romantic_garland/assets/top.png);
+$bottom-wreath: url(https://withjoy.com/assets/public/joyStyles3/romantic_garland/assets/bottom.png);
+$wreath-width: 700px;
+
+$jane: 'JaneAusten';
+$paduka: 'Paduka Script free version';
+$marcelle: 'Marcelle Script';
+$scope: 'Scope One';
+$arvo: 'Arvo', serif;
+$raleway: 'Raleway', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+$maven: 'Maven Pro', sans-serif;
+
+body {
+  color: #555;
+}
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+header {
+  z-index:3;
+  top: 0px;
+  width: 100%;
+  padding: 25px 0px;
+  position:absolute;
+  display:block;
+  box-sizing:inherit;
+}
+
+.test-section {
+  background-image: $toys;
+}
+
+#timeline {
+  font-family: 'Cedarville Cursive', cursive;
+  background-image: $natural;
+}
+
+#timeline img {
+  height: 150px;
+  margin: 0px;
+}
+
+#timeline figure {
+  float: left;
+  position: relative;
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 2px 3px black;
+}
+#timeline figure:hover {
+  box-shadow: 5px 10px 100px black;
+  -webkit-transform: scale(1.1,1.1);
+  z-index: 20;
+}
+#timeline figure:before { /*see the support section below to more info on using the :before psuedo element*/
+content: '';
+display: block;
+position: absolute;
+left:5px; /*postion from the left side of the frame (positive value move the tape right, negative moves it left)*/
+top: -15px; /*position from the top of the frame (positive move it above the frame, negative below)*/
+width: 75px; /*width of the tape*/
+height: 25px; /*height of the tape*/
+background-color: rgba(222,220,198,0.7); /*colour of the tape, use rgba to make it slightly transparent*/
+/*rotate the tape 12 degrees anti-clockwise*/
+-webkit-transform: rotate(-12deg);
+-moz-transform: rotate(-12deg);
+-o-transform: rotate(-12deg);
+-ms-transform: rotate(-12deg);
+}
+
+figure.pic1 {
+  -webkit-transform : rotate(-10deg);
+  z-index: 1;
+}
+
+#announce-tree-1 {
+  width: 11%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#announce-tree-2 {
+  width: 9%;
+  position:absolute;
+  bottom: 0;
+  left: 15%;
+}
+#announce-tree-3 {
+  width: 11%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#announce-tree-4 {
+  width: 9%;
+  position:absolute;
+  bottom: 0;
+  right: 15%;
+}
+
+
+#announcement {
+    background-image: $top-wreath, $bottom-wreath;
+    background-position: center top, center bottom;
+    background-size: $wreath-width, $wreath-width;
+    background-repeat: no-repeat, no-repeat;
+    min-height: 950px;
+    position:relative
+}
+
+#announce-title {
+  font-family: $paduka;
+  font-size: 3.2em;
+}
+
+#announce-date {
+  font-family: $arvo;
+  color: $light-green;
+  font-size: 2.7em;
+  font-weight:300;
+  margin-top:-35px;
+}
+
+#announce-date span {
+  color: $sand;
+}
+
+#announce-location {
+  font-family: $raleway;
+  font-size: 3.5em;
+  margin-top: -51px;
+  font-variant: all-small-caps;
+  letter-spacing: 13px;
+}
+
+.announce-between {
+  width:100px;
+  margin-top:-30px
+}
+
+#announce-countdown {
+  margin-top: 20px;
+  font-family: $jane;
+}
+
+#announce-hr {
+  width: ($wreath-width - 150px);
+  text-align: center;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+#announce-countdown span {
+  font-size: 1.5em;
+}
+
+.bride-name, .groom-name {
+  font-family:'sacramento';
+  font-size:80px;
+  color:#ffffff;
+  vertical-align:top;
+  box-sizing:inherit;
+}
+.bride-korean, .groom-korean {
+  vertical-align:top;
+  box-sizing:inherit;
+  font-size:30px;
+  color:#fff;
+  display:inline-block;
+  font-family: 'UhBeepuding';
+  position:absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bride-korean {
+  top: 92%;
+}
+.groom-korean {
+  top: 0;
+}
+.bride-name {
+  float:left;
+  font-size:60px;
+  margin-top:45px;
+}
+
+.groom-name {
+  float:right;
+  font-size:70px;
+  margin-top: 30px;
+}
+
+.header-icon {
+  display:inline-block;
+  vertical-align:top;
+  position:relative;
+  width:245px;
+  margin:0 25px;
+  box-sizing:inherit;
+}
+.header-icon img {
+  margin:auto;
+  display:block;
+  max-width:100%;
+  height:auto;
+  border:0;
+  vertical-align:middle;
+}
+.couple-image {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+  border-radius: 100%;
+  z-index:1;
+}
+
+#couple-image-bg {
+  width: 120px;
+  height: 120px;
+  background-color: #ababab;
+  box-shadow: 0 0 32px 7px #a0a0a0;
+  border-radius: 60px;
+  position: absolute;
+  margin-left: 8px;
+  z-index:0;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+ 
+#scroll-icon {
+  position : absolute;
+  z-index : 1;
+  right : 0;
+  bottom : 0px;
+  left : 0;
+  width : 70px;
+  height : 50px;
+  margin : auto;
+  text-align:center;
+}
+#scroll-icon a span {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  width: 30px;
+  height: 50px;
+  margin-left: -15px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#scroll-icon a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: scroller 2s infinite;
+  animation: scroller 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes scroller {
+  0% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scroller {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#map {
+    width: 100%;
+    height: 500px;
+}
+.footer {
+  padding: 1.25rem 1.25rem 1.25rem;
+  font-family: $maven;
+  font-size: 1.3em;
+  font-variant: all-small-caps;
+}
+.footer i {
+  font-size: 0.85em;
+}
+
+#registry {
+  min-height: 800px;
+}
+
+.section-head {
+  font-family: $jane;
+  font-size: 3em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.section-head-between {
+  margin-top: 70px;
+  width: 100px;
+}
+
+.registry-logo {
+  width: 200px;
+  border-radius: 100px;
+  border: 5px solid $dark-blue;
+} 
+.voff-sm {
+  margin-top: 50px;
+}
+.voff-md {
+  margin-top: 75px;
+}
+.voff-lg {
+  margin-top: 100px;
+}
+.section-text {
+  max-width: 600px;
+  font-family: "Arvo", sans-serif;
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+#photo-section {
+  min-height: 1000px;
+  width: 100%;
+  background-image: $cork;
+}
+
+#masonry {
+  margin-top: 50px;
+  width: 85%;
+  margin: 0 auto;
+
+}
+
+.grid-item {
+  border-radius: 7px;
+  margin-bottom: 15px;
+  background-color: white;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 2px 3px black;
+}
+.grid-col,
+.grid-item {
+  width: 250px;
+}
+
+.grid-item img {
+    border-radius: 7px;
+  margin: 0px;
+  z-index: 1;
+}
