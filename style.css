@@ -1996,8 +1996,24 @@ article {
 textarea {
   font-family: "UhBeepuding", serif; }
 
+@font-face {
+  font-family: 'Brandon Grotesque Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Brandon Grotesque Light"), url("fonts/brandon/brandon-grotesque-light-58a8a4b38001d.woff") format("woff"); }
 body {
-  color: #555; }
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.05); }
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100; }
 
 h1,
 h2,
@@ -2012,6 +2028,9 @@ header {
   position: absolute;
   display: block;
   box-sizing: inherit; }
+
+section, div {
+  background: transparent; }
 
 .test-section {
   background-image: url(./tiles/memphis-colorful.png); }
@@ -2134,6 +2153,17 @@ figure.pic1 {
 
 #announce-countdown span {
   font-size: 1.5em; }
+
+.couple-name {
+  font-family: 'Brandon Grotesque Light', sans-serif;
+  font-size: 23px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-weight: bold;
+  letter-spacing: 28.75px;
+  line-height: 33px;
+  color: #fff; }
 
 .bride-name, .groom-name {
   font-family: 'sacramento';
@@ -2336,5 +2366,21 @@ figure.pic1 {
   border-radius: 7px;
   margin: 0px;
   z-index: 1; }
+
+#rsvp-button {
+  border: white 2px solid;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 33px;
+  padding-right: 18px;
+  letter-spacing: 15px;
+  line-height: 33px; }
+
+#rsvp-button:hover {
+  color: #260512;
+  background: white; }
 
 /*# sourceMappingURL=style.css.map */
