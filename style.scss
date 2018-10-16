@@ -23,6 +23,13 @@ $light-green: #90A59E;
 $light-blue: #8897A0;
 $sand: #CCBDAA;
 
+$evergreen: #354D33;//#004531;
+$plank: #BFAC97;
+$gold: #A27B46;
+
+$wix-brown-bg: #EDECE9;
+$wix-brown-text: #5E5C5C;
+
 $cork: url(./tiles/cork-wallet.png);
 $doodles: url(./tiles/doodles.png);
 $natural: url(./tiles/ep_naturalwhite.png);
@@ -213,6 +220,25 @@ figure.pic1 {
   font-size: 1.5em;
 }
 
+.content-section {
+  min-height: 500px;
+  background-color: $wix-brown-bg;
+}
+
+.content-header {
+  padding-top: 50px;
+  font-family: 'Brandon Grotesque Light', sans-serif;
+  font-size: 23px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-weight: bold;
+  letter-spacing: 28.75px;
+  line-height: 33px;
+  text-align: center;
+  color: $wix-brown-text;
+}
+
 .couple-name {
   font-family: 'Brandon Grotesque Light', sans-serif;
   font-size: 23px;
@@ -222,10 +248,17 @@ figure.pic1 {
   font-weight: bold;
   letter-spacing: 28.75px;
   line-height: 33px;
-
   color: #fff;
 }
 
+.couple-name-icon {
+  margin-right: 40px;
+  margin-left: 12px;
+}
+
+.couple-name-icon img {
+  width: 40px;
+}
 .bride-name, .groom-name {
   font-family:'sacramento';
   font-size:80px;
@@ -375,6 +408,16 @@ figure.pic1 {
     width: 100%;
     height: 500px;
 }
+
+#venue {
+  height: 700px;
+  overflow:hidden;
+}
+
+#venue img {
+  width: 100%;
+}
+
 .footer {
   padding: 1.25rem 1.25rem 1.25rem;
   font-family: $maven;

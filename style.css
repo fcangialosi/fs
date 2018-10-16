@@ -2153,6 +2153,23 @@ figure.pic1 {
 #announce-countdown span {
   font-size: 1.5em; }
 
+.content-section {
+  min-height: 500px;
+  background-color: #EDECE9; }
+
+.content-header {
+  padding-top: 50px;
+  font-family: 'Brandon Grotesque Light', sans-serif;
+  font-size: 23px;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-weight: bold;
+  letter-spacing: 28.75px;
+  line-height: 33px;
+  text-align: center;
+  color: #5E5C5C; }
+
 .couple-name {
   font-family: 'Brandon Grotesque Light', sans-serif;
   font-size: 23px;
@@ -2163,6 +2180,13 @@ figure.pic1 {
   letter-spacing: 28.75px;
   line-height: 33px;
   color: #fff; }
+
+.couple-name-icon {
+  margin-right: 40px;
+  margin-left: 12px; }
+
+.couple-name-icon img {
+  width: 40px; }
 
 .bride-name, .groom-name {
   font-family: 'sacramento';
@@ -2294,6 +2318,13 @@ figure.pic1 {
 #map {
   width: 100%;
   height: 500px; }
+
+#venue {
+  height: 700px;
+  overflow: hidden; }
+
+#venue img {
+  width: 100%; }
 
 .footer {
   padding: 1.25rem 1.25rem 1.25rem;

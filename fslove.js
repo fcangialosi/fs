@@ -9,12 +9,12 @@ jQuery(document).ready(function($){
      $('body').animate({scrollTop: +700}, 1000);
   });
 
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZmNhbmdpYWxvc2k5NCIsImEiOiJjajZhNnJ5YnMweXhnMzRsN2NqYWNhbWlrIn0.jIXe8x7CmL6wHlcSX7al4w';
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZmNhbmdpYWwiLCJhIjoiSEE2NW84ayJ9.I_SmNeUGjd30kkUHN9hPVA';
   var map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/fcangialosi94/cj6a9bv0r31bw2rp7r629ukkg', // stylesheet location
-    center: [-77.134388, 38.874426], // starting position [lng, lat]
-    zoom: 11.80 // starting zoom,
+    style: 'mapbox://styles/fcangial/cjnb91z9g5qbs2rt27r79rv3e', // stylesheet location
+    center: [-76.617, 39.292], // starting position [lng, lat]
+    zoom: 14 // starting zoom,
   });
   map.scrollZoom.disable();
 
