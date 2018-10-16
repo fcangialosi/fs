@@ -2377,7 +2377,8 @@ figure.pic1 {
   padding-left: 33px;
   padding-right: 18px;
   letter-spacing: 15px;
-  line-height: 33px; }
+  line-height: 33px;
+  color: white; }
 
 #rsvp-button:hover {
   color: #260512;
